@@ -1,0 +1,47 @@
+﻿<Window x:Class="Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Model_railway_calculator"
+        mc:Ignorable="d"
+        Title="Model railway caculator" Height="600" Width="900" Icon="train.png" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Margin="0,0,0,-5">
+ <!--Menubalk-->
+        <Menu HorizontalAlignment="Left" Height="20" Margin="0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="5" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+            <MenuItem Header="File" Height="20" Width="30" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+                <MenuItem x:Name="MainWindow" Header="Mainwindow" HorizontalAlignment="Left" Height="20" Width="165"/>
+                <MenuItem x:Name="FileExit" Header="Quit" HorizontalAlignment="Left" Height="20" Width="165"/>
+            </MenuItem>
+            <MenuItem Header="Scale calulator" Height="20" Width="90">
+                <MenuItem x:Name="Org_Scale" Header="1:1 to scale" HorizontalAlignment="Left" Height="20" Width="160"/>
+                <MenuItem x:Name="Scale_Org" Header="Scale to 1:1" HorizontalAlignment="Left" Height="20" Width="160"/>
+                <MenuItem x:Name="Scale_Scale" Header="Scale to scale" HorizontalAlignment="Left" Height="20" Width="160"/>
+            </MenuItem>
+            <MenuItem Header="Model railway" Height="20" Width="90">
+                <MenuItem x:Name="Slope" Header="Slope" HorizontalAlignment="Left" Height="20" Width="150"/>
+                <MenuItem x:Name="Track_radius" Header="Track radius" HorizontalAlignment="Left" Height="20" Width="150"/>
+                <MenuItem x:Name="Helex" Header="Helex" HorizontalAlignment="Left" Height="20" Width="150"/>
+            </MenuItem>
+            <MenuItem Header="DCC" Height="20" Width="35">
+                <MenuItem x:Name="Bit_Calculator" Header="Bit calculator" HorizontalAlignment="Left" Height="20" Width="185"/>
+                <MenuItem x:Name="CV29_Calculator" Header="CV29 calculator" HorizontalAlignment="Left" Height="20" Width="185"/>
+                <MenuItem x:Name="Adres_Calculator" Header="Address calculator" HorizontalAlignment="Left" Height="20" Width="185"/>
+            </MenuItem>
+            <MenuItem Header="Märklin" Height="20" Width="55">
+                <MenuItem x:Name="Dipswitch" Header="Dipswitch" Height="20" Width="140"/>
+            </MenuItem>
+            <MenuItem Header="Help" Height="20" Width="40">
+                <MenuItem x:Name="Info" Header="Info" HorizontalAlignment="Left" Height="20" Width="205" IsEnabled="False"/>
+                <MenuItem x:Name="GNU" Header="General Public License" HorizontalAlignment="Left" Height="20" Width="205"/>
+            </MenuItem>
+        </Menu>
+<!--Ende Menubalk-->
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Copyright (C) By W.D. Kok  2020 All rights reserved." HorizontalAlignment="Left" Height="39.26" Margin="486.826,508.696,0,0" VerticalAlignment="Top" Width="381.392" FontSize="16"/>
+        <Label Content="The author is W.D.Kok.&#xD;&#xA;&#xD;&#xA;Model railway calculator is Written VB Net 2019.&#xD;&#xA;&#xD;&#xA;Use is allowed under GNU 2.&#xD;&#xA;&#xD;&#xA;The author accepts no responsibility for the use of this program.&#xD;&#xA;" HorizontalAlignment="Left" Height="272.956" Margin="75.522,82.435,0,0" VerticalAlignment="Top" Width="714.174" FontSize="20"/>
+
+    </Grid>
+
+</Window>
