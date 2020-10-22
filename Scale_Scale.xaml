@@ -1,0 +1,203 @@
+﻿<Window x:Class="Scale_Scale"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Model_railway_calculator"
+        mc:Ignorable="d"
+        Title="Model railway caculator" Height="600" Width="900" Icon="train.png" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Margin="0,0,0,-5">
+        <!--Menubalk-->
+        <Menu HorizontalAlignment="Left" Height="20" Margin="0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="5" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+            <MenuItem Header="File" Height="20" Width="30" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+                <MenuItem x:Name="MainWindow" Header="Mainwindow" HorizontalAlignment="Left" Height="20" Width="165"/>
+                <MenuItem x:Name="FileExit" Header="Quit" HorizontalAlignment="Left" Height="20" Width="165"/>
+            </MenuItem>
+            <MenuItem Header="Scale calulator" Height="20" Width="90">
+                <MenuItem x:Name="Org_Scale" Header="1:1 to scale" HorizontalAlignment="Left" Height="20" Width="160"/>
+                <MenuItem x:Name="Scale_Org" Header="Scale to 1:1" HorizontalAlignment="Left" Height="20" Width="160"/>
+                <MenuItem x:Name="Scale_Scale" Header="Scale to scale" HorizontalAlignment="Left" Height="20" Width="160" IsEnabled="False"/>
+            </MenuItem>
+            <MenuItem Header="Model railway" Height="20" Width="90">
+                <MenuItem x:Name="Slope" Header="Slope" HorizontalAlignment="Left" Height="20" Width="150"/>
+                <MenuItem x:Name="Track_radius" Header="Track radius" HorizontalAlignment="Left" Height="20" Width="150"/>
+                <MenuItem x:Name="Helex" Header="Helex" HorizontalAlignment="Left" Height="20" Width="150"/>
+            </MenuItem>
+            <MenuItem Header="DCC" Height="20" Width="35">
+                <MenuItem x:Name="Bit_Calculator" Header="Bit calculator" HorizontalAlignment="Left" Height="20" Width="185"/>
+                <MenuItem x:Name="CV29_Calculator" Header="CV29 calculator" HorizontalAlignment="Left" Height="20" Width="185"/>
+                <MenuItem x:Name="Adres_Calculator" Header="Address calculator" HorizontalAlignment="Left" Height="20" Width="185"/>
+            </MenuItem>
+            <MenuItem Header="Märklin" Height="20" Width="55">
+                <MenuItem x:Name="Dipswitch" Header="Dipswitch" Height="20" Width="140"/>
+            </MenuItem>
+            <MenuItem Header="Help" Height="20" Width="40">
+                <MenuItem x:Name="Info" Header="Info" HorizontalAlignment="Left" Height="20" Width="205"/>
+                <MenuItem x:Name="GNU" Header="General Public License" HorizontalAlignment="Left" Height="20" Width="205"/>
+            </MenuItem>
+        </Menu>
+        <!--Ende Menubalk-->
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="From scale to scale" HorizontalAlignment="Left" Height="57" Margin="263,25,0,0" VerticalAlignment="Top" Width="386" FontSize="36" FontWeight="Bold"/>
+        <!--From unit-->
+        <Grid HorizontalAlignment="Left" Height="200" Margin="8,90,0,0" VerticalAlignment="Top" Width="90">
+            <Label Content="From unit" HorizontalAlignment="Left" Height="28" Margin="10,1,0,0" VerticalAlignment="Top" Width="80" FontSize="16"/>
+            <RadioButton x:Name="Chk_Mile1" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,32,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="mile" HorizontalAlignment="Left" Height="28" Margin="30,23,0,0" VerticalAlignment="Top" Width="60" FontSize="16"/>
+            <RadioButton x:Name="Chk_Foot1" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,56,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="foot" HorizontalAlignment="Left" Height="28" Margin="30,45,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+            <RadioButton x:Name="Chk_Inch1" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,80,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="inch" HorizontalAlignment="Left" Height="28" Margin="30,70,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+            <RadioButton x:Name="Chk_Km1" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,105,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="km" HorizontalAlignment="Left" Height="28" Margin="30,95,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+            <RadioButton x:Name="Chk_M1" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,130,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="m" HorizontalAlignment="Left" Height="28" Margin="30,120,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+            <RadioButton x:Name="Chk_Cm1" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,155,0,0" VerticalAlignment="Top" Width="15" IsChecked="True"/>
+            <Label Content="cm" HorizontalAlignment="Left" Height="28" Margin="30,145,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+            <RadioButton x:Name="Chk_Mm1" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,180,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="mm" HorizontalAlignment="Left" Height="28" Margin="30,170,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+            <Rectangle HorizontalAlignment="Left" Height="200" Margin="0" Stroke="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" StrokeThickness="1" VerticalAlignment="Top" Width="90"/>
+        </Grid>
+        <!--From scale-->
+        <Grid HorizontalAlignment="Left" Height="260" Margin="101,90,0,0" VerticalAlignment="Top" Width="340">
+            <Rectangle HorizontalAlignment="Left" Height="260" Margin="0" Stroke="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" StrokeThickness="1" VerticalAlignment="Top" Width="340"/>
+            <Label Content="From scale To scale" HorizontalAlignment="Left" Height="28" Margin="10,-1,0,0" VerticalAlignment="Top" Width="91" FontSize="16"/>
+            <RadioButton x:Name="Chk_Z_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,30,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:220" HorizontalAlignment="Left" Height="28" Margin="15,20,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="Z scale" HorizontalAlignment="Left" Height="28" Margin="65,20,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+            <RadioButton x:Name="Chk_N_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,56,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:160" HorizontalAlignment="Left" Height="28" Margin="15,45,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="N scale" HorizontalAlignment="Left" Height="28" Margin="65,45,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+            <RadioButton x:Name="Chk_TT_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,80,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:120" HorizontalAlignment="Left" Height="28" Margin="15,70,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="TT scale" HorizontalAlignment="Left" Height="28" Margin="65,70,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+            <RadioButton x:Name="Chk_H0_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,105,0,0" VerticalAlignment="Top" Width="15" IsChecked="True"/>
+            <Label Content="1:87" HorizontalAlignment="Left" Height="28" Margin="15,95,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="H0 scale" HorizontalAlignment="Left" Height="28" Margin="65,95,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+            <RadioButton x:Name="Chk_00_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,130,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:76" HorizontalAlignment="Left" Height="28" Margin="15,120,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="00 scale" HorizontalAlignment="Left" Height="28" Margin="65,120,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+            <RadioButton x:Name="Chk_S_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,155,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:64" HorizontalAlignment="Left" Height="28" Margin="15,145,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="S scale" HorizontalAlignment="Left" Height="28" Margin="65,145,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+            <RadioButton x:Name="Chk_0_1_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,180,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:48" HorizontalAlignment="Left" Height="28" Margin="15,170,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="0 scale (NMRA)" HorizontalAlignment="Left" Height="28" Margin="65,170,0,0" VerticalAlignment="Top" Width="120" FontSize="16"/>
+            <RadioButton x:Name="Chk_0_2_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,205,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:45" HorizontalAlignment="Left" Height="28" Margin="15,195,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="0 scale (NEM)" HorizontalAlignment="Left" Height="28" Margin="65,195,0,0" VerticalAlignment="Top" Width="109" FontSize="16"/>
+            <RadioButton x:Name="Chk_0_3_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,230,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:43.5" HorizontalAlignment="Left" Height="28" Margin="15,220,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="0 scale (BRMSB)" HorizontalAlignment="Left" Height="28" Margin="65,220,0,0" VerticalAlignment="Top" Width="121" FontSize="16"/>
+            <RadioButton x:Name="Chk_I_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,30,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:32" HorizontalAlignment="Left" Height="28" Margin="195,20,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="I scale" HorizontalAlignment="Left" Height="28" Margin="245,20,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <RadioButton x:Name="Chk_II_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,55,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:22.5" HorizontalAlignment="Left" Height="28" Margin="195,45,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="II scale" HorizontalAlignment="Left" Height="28" Margin="245,45,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <RadioButton x:Name="Chk_III_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,80,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:16" HorizontalAlignment="Left" Height="28" Margin="195,70,0,0" VerticalAlignment="Top" Width="41" FontSize="16"/>
+            <Label Content="III scale" HorizontalAlignment="Left" Height="28" Margin="245,70,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <RadioButton x:Name="Chk_V_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,105,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:11" HorizontalAlignment="Left" Height="28" Margin="195,95,0,0" VerticalAlignment="Top" Width="41" FontSize="16"/>
+            <Label Content="V scale" HorizontalAlignment="Left" Height="28" Margin="245,95,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <RadioButton x:Name="Chk_VII_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,130,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:8" HorizontalAlignment="Left" Height="28" Margin="195,120,0,0" VerticalAlignment="Top" Width="41" FontSize="16"/>
+            <Label Content="VII scale" HorizontalAlignment="Left" Height="28" Margin="245,120,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <RadioButton x:Name="Chk_X_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,155,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:5.5" HorizontalAlignment="Left" Height="28" Margin="195,145,0,0" VerticalAlignment="Top" Width="41" FontSize="16"/>
+            <Label Content="X scale" HorizontalAlignment="Left" Height="28" Margin="245,145,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <RadioButton x:Name="Chk_XY_A" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,180,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:XY" HorizontalAlignment="Left" Height="28" Margin="195,170,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="Other scale" HorizontalAlignment="Left" Height="28" Margin="245,170,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <TextBox x:Name="Txb_XY" HorizontalAlignment="Left" Height="28" Margin="245,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <Label Content="XY =" HorizontalAlignment="Left" Height="28" Margin="195,195,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+
+        </Grid>
+        <!--To unit-->
+        <Grid HorizontalAlignment="Left" Height="200" Margin="787,90,0,0" VerticalAlignment="Top" Width="90">
+            <Label Content="To unit" HorizontalAlignment="Left" Height="28" Margin="10,1,0,0" VerticalAlignment="Top" Width="80" FontSize="16"/>
+            <RadioButton x:Name="Chk_Mile2" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,32,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="mile" HorizontalAlignment="Left" Height="28" Margin="30,23,0,0" VerticalAlignment="Top" Width="60" FontSize="16"/>
+            <RadioButton x:Name="Chk_Foot2" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,56,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="foot" HorizontalAlignment="Left" Height="28" Margin="30,45,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+            <RadioButton x:Name="Chk_Inch2" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,80,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="inch" HorizontalAlignment="Left" Height="28" Margin="30,70,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+            <RadioButton x:Name="Chk_Km2" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,105,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="km" HorizontalAlignment="Left" Height="28" Margin="30,95,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+            <RadioButton x:Name="Chk_M2" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,130,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="m" HorizontalAlignment="Left" Height="28" Margin="30,120,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+            <RadioButton x:Name="Chk_Cm2" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,155,0,0" VerticalAlignment="Top" Width="15" IsChecked="True"/>
+            <Label Content="cm" HorizontalAlignment="Left" Height="28" Margin="30,145,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+            <RadioButton x:Name="Chk_Mm2" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,180,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="mm" HorizontalAlignment="Left" Height="28" Margin="30,170,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+            <Rectangle HorizontalAlignment="Left" Height="200" Margin="0" Stroke="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" StrokeThickness="1" VerticalAlignment="Top" Width="90"/>
+        </Grid>
+        
+        <Label Content="1.   Choose &quot;From unit&quot; of measure&#xA;2.   Choose &quot;From scale&quot;&#xD;&#xA;3.   Choose &quot;To scale&quot;&#xA;4.   Choose &quot;To unit&quot; of measure&#xA;5.   Enter the size to  be calculated:&#xA;6.   Push them calculate butten.&#xA;" HorizontalAlignment="Left" Height="138" Margin="50,370,0,0" VerticalAlignment="Top" Width="263" FontSize="16"/>
+        <TextBox x:Name="Txt_Input" HorizontalAlignment="Left" Height="28" Margin="311,459,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="16"/>
+        <TextBox x:Name="Txt_Unit_A" HorizontalAlignment="Left" Height="28" Margin="382,459,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" FontSize="16" IsEnabled="False" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Text="cm"/>
+        <Button x:Name="Btn_Calculate" Content="Calculate&#xA;" HorizontalAlignment="Left" Height="35" Margin="313,491,0,0" VerticalAlignment="Top" Width="110" FontSize="20"/>
+        <TextBox x:Name="Txt_Output" HorizontalAlignment="Left" Height="28" Margin="341,370,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="526" Foreground="DarkBlue" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" IsEnabled="False" TextAlignment="Right"/>
+        <!--To scale-->
+        <Grid HorizontalAlignment="Left" Height="260" Margin="444,90,0,0" VerticalAlignment="Top" Width="340">
+            <Rectangle HorizontalAlignment="Left" Height="260" Margin="0" Stroke="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" StrokeThickness="1" VerticalAlignment="Top" Width="340"/>
+            <Label Content="To scale" HorizontalAlignment="Left" Height="28" Margin="10,-1,0,0" VerticalAlignment="Top" Width="91" FontSize="16"/>
+            <RadioButton x:Name="Chk_Z_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,30,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:220" HorizontalAlignment="Left" Height="28" Margin="15,20,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="Z scale" HorizontalAlignment="Left" Height="28" Margin="65,20,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+            <RadioButton x:Name="Chk_N_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,56,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:160" HorizontalAlignment="Left" Height="28" Margin="15,45,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="N scale" HorizontalAlignment="Left" Height="28" Margin="65,45,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+            <RadioButton x:Name="Chk_TT_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,80,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:120" HorizontalAlignment="Left" Height="28" Margin="15,70,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="TT scale" HorizontalAlignment="Left" Height="28" Margin="65,70,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+            <RadioButton x:Name="Chk_H0_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,105,0,0" VerticalAlignment="Top" Width="15" IsChecked="True"/>
+            <Label Content="1:87" HorizontalAlignment="Left" Height="28" Margin="15,95,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="H0 scale" HorizontalAlignment="Left" Height="28" Margin="65,95,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+            <RadioButton x:Name="Chk_00_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,130,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:76" HorizontalAlignment="Left" Height="28" Margin="15,120,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="00 scale" HorizontalAlignment="Left" Height="28" Margin="65,120,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+            <RadioButton x:Name="Chk_S_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,155,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:64" HorizontalAlignment="Left" Height="28" Margin="15,145,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="S scale" HorizontalAlignment="Left" Height="28" Margin="65,145,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+            <RadioButton x:Name="Chk_0_1_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,180,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:48" HorizontalAlignment="Left" Height="28" Margin="15,170,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="0 scale (NMRA)" HorizontalAlignment="Left" Height="28" Margin="65,170,0,0" VerticalAlignment="Top" Width="120" FontSize="16"/>
+            <RadioButton x:Name="Chk_0_2_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,205,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:45" HorizontalAlignment="Left" Height="28" Margin="15,195,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="0 scale (NEM)" HorizontalAlignment="Left" Height="28" Margin="65,195,0,0" VerticalAlignment="Top" Width="109" FontSize="16"/>
+            <RadioButton x:Name="Chk_0_3_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="5,230,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:43.5" HorizontalAlignment="Left" Height="28" Margin="15,220,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="0 scale (BRMSB)" HorizontalAlignment="Left" Height="28" Margin="65,220,0,0" VerticalAlignment="Top" Width="121" FontSize="16"/>
+            <RadioButton x:Name="Chk_I_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,30,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:32" HorizontalAlignment="Left" Height="28" Margin="195,20,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="I scale" HorizontalAlignment="Left" Height="28" Margin="245,20,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <RadioButton x:Name="Chk_II_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,55,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:22.5" HorizontalAlignment="Left" Height="28" Margin="195,45,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="II scale" HorizontalAlignment="Left" Height="28" Margin="245,45,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <RadioButton x:Name="Chk_III_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,80,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:16" HorizontalAlignment="Left" Height="28" Margin="195,70,0,0" VerticalAlignment="Top" Width="41" FontSize="16"/>
+            <Label Content="III scale" HorizontalAlignment="Left" Height="28" Margin="245,70,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <RadioButton x:Name="Chk_V_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,105,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:11" HorizontalAlignment="Left" Height="28" Margin="195,95,0,0" VerticalAlignment="Top" Width="41" FontSize="16"/>
+            <Label Content="V scale" HorizontalAlignment="Left" Height="28" Margin="245,95,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <RadioButton x:Name="Chk_VII_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,130,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:8" HorizontalAlignment="Left" Height="28" Margin="195,120,0,0" VerticalAlignment="Top" Width="41" FontSize="16"/>
+            <Label Content="VII scale" HorizontalAlignment="Left" Height="28" Margin="245,120,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <RadioButton x:Name="Chk_X_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,155,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:5.5" HorizontalAlignment="Left" Height="28" Margin="195,145,0,0" VerticalAlignment="Top" Width="41" FontSize="16"/>
+            <Label Content="X scale" HorizontalAlignment="Left" Height="28" Margin="245,145,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <RadioButton x:Name="Chk_YZ_B" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="185,180,0,0" VerticalAlignment="Top" Width="15"/>
+            <Label Content="1:YZ" HorizontalAlignment="Left" Height="28" Margin="195,170,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+            <Label Content="Other scale" HorizontalAlignment="Left" Height="28" Margin="245,170,0,0" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <TextBox x:Name="Txb_YZ" HorizontalAlignment="Left" Height="28" Margin="245,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <Label Content="YZ =" HorizontalAlignment="Left" Height="28" Margin="195,195,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
+
+        </Grid>
+
+
+    </Grid>
+
+</Window>
