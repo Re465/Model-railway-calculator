@@ -1,0 +1,41 @@
+D:\vb\Model railway calculator\bin\Debug\Model railway calculator.exe.config
+D:\vb\Model railway calculator\bin\Debug\Model railway calculator.exe
+D:\vb\Model railway calculator\bin\Debug\Model railway calculator.pdb
+D:\vb\Model railway calculator\bin\Debug\Model railway calculator.xml
+D:\vb\Model railway calculator\obj\Debug\Model railway calculator.vbprojAssemblyReference.cache
+D:\vb\Model railway calculator\obj\Debug\MainWindow.g.vb
+D:\vb\Model railway calculator\obj\Debug\Application.g.vb
+D:\vb\Model railway calculator\obj\Debug\Model railway calculator_MarkupCompile.cache
+D:\vb\Model railway calculator\obj\Debug\Model railway calculator_MarkupCompile.lref
+D:\vb\Model railway calculator\obj\Debug\MainWindow.baml
+D:\vb\Model railway calculator\obj\Debug\Model railway calculator.g.resources
+D:\vb\Model railway calculator\obj\Debug\Model_railway_calculator.Resources.resources
+D:\vb\Model railway calculator\obj\Debug\Model railway calculator.vbproj.GenerateResource.cache
+D:\vb\Model railway calculator\obj\Debug\Model railway calculator.vbproj.CoreCompileInputs.cache
+D:\vb\Model railway calculator\obj\Debug\Model railway calculator.exe
+D:\vb\Model railway calculator\obj\Debug\Model railway calculator.xml
+D:\vb\Model railway calculator\obj\Debug\Model railway calculator.pdb
+D:\vb\Model railway calculator\obj\Debug\Info.g.vb
+D:\vb\Model railway calculator\obj\Debug\Info.baml
+D:\vb\Model railway calculator\obj\Debug\Slope.g.vb
+D:\vb\Model railway calculator\obj\Debug\Slope.baml
+D:\vb\Model railway calculator\obj\Debug\Gyroscope.g.vb
+D:\vb\Model railway calculator\obj\Debug\Gyroscope.baml
+D:\vb\Model railway calculator\obj\Debug\Helex.g.vb
+D:\vb\Model railway calculator\obj\Debug\Helex.baml
+D:\vb\Model railway calculator\obj\Debug\Org_Scale.g.vb
+D:\vb\Model railway calculator\obj\Debug\Org_Scale.baml
+D:\vb\Model railway calculator\obj\Debug\Scale_Org.g.vb
+D:\vb\Model railway calculator\obj\Debug\Scale_Org.baml
+D:\vb\Model railway calculator\obj\Debug\Scale_Scale.g.vb
+D:\vb\Model railway calculator\obj\Debug\Scale_Scale.baml
+D:\vb\Model railway calculator\obj\Debug\Bit_Calculator.g.vb
+D:\vb\Model railway calculator\obj\Debug\Bit_Calculator.baml
+D:\vb\Model railway calculator\obj\Debug\CV29_Calculator.g.vb
+D:\vb\Model railway calculator\obj\Debug\CV29_Calculator.baml
+D:\vb\Model railway calculator\obj\Debug\Adres_Calculator.g.vb
+D:\vb\Model railway calculator\obj\Debug\Adres_Calculator.baml
+D:\vb\Model railway calculator\obj\Debug\Dipswitch.g.vb
+D:\vb\Model railway calculator\obj\Debug\Dipswitch.baml
+D:\vb\Model railway calculator\obj\Debug\GNU.g.vb
+D:\vb\Model railway calculator\obj\Debug\GNU.baml
