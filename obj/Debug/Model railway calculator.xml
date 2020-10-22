@@ -1,0 +1,203 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Model railway calculator
+</name>
+</assembly>
+<members>
+<member name="T:Model_railway_calculator.My.MyWpfExtension">
+ <summary>
+ Modul zum Definieren der im My-Namespace für WPF verfügbaren Eigenschaften
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Model_railway_calculator.My.MyWpfExtension.Application">
+ <summary>
+ Gibt das Anwendungsobjekt für die ausgeführte Anwendung zurück.
+ </summary>
+</member>
+<member name="P:Model_railway_calculator.My.MyWpfExtension.Computer">
+ <summary>
+ Gibt Informationen über den Hostcomputer zurück.
+ </summary>
+</member>
+<member name="P:Model_railway_calculator.My.MyWpfExtension.User">
+ <summary>
+ Gibt Informationen über den aktuellen Benutzer zurück.  Wenn Sie die Anwendung mit den aktuellen Windows-
+ Anmeldeinformationen ausführen möchten, rufen Sie My.User.InitializeWithWindowsUser() auf.
+ </summary>
+</member>
+<member name="P:Model_railway_calculator.My.MyWpfExtension.Log">
+ <summary>
+ Gibt das Anwendungsprotokoll zurück. Die Listener können in der Konfigurationsdatei der Anwendung konfiguriert werden.
+ </summary>
+</member>
+<member name="P:Model_railway_calculator.My.MyWpfExtension.Windows">
+ <summary>
+ Gibt die im Projekt definierte Windows-Sammlung zurück.
+ </summary>
+</member>
+<member name="T:Model_railway_calculator.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Model_railway_calculator.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Model_railway_calculator.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:Model_railway_calculator.Application">
+<summary>
+Application
+</summary>
+</member>
+<member name="M:Model_railway_calculator.Application.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:Model_railway_calculator.Application.Main">
+<summary>
+Application Entry Point.
+</summary>
+</member>
+<member name="T:Model_railway_calculator.Adres_Calculator">
+<summary>
+Adres_Calculator
+</summary>
+</member>
+<member name="M:Model_railway_calculator.Adres_Calculator.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Model_railway_calculator.CV29_Calculator">
+<summary>
+CV29_Calculator
+</summary>
+</member>
+<member name="M:Model_railway_calculator.CV29_Calculator.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Model_railway_calculator.GNU">
+<summary>
+GNU
+</summary>
+</member>
+<member name="M:Model_railway_calculator.GNU.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Model_railway_calculator.Info">
+<summary>
+Info
+</summary>
+</member>
+<member name="M:Model_railway_calculator.Info.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Model_railway_calculator.Gyroscope">
+<summary>
+Gyroscope
+</summary>
+</member>
+<member name="M:Model_railway_calculator.Gyroscope.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Model_railway_calculator.Helex">
+<summary>
+Helex
+</summary>
+</member>
+<member name="M:Model_railway_calculator.Helex.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Model_railway_calculator.Bit_Calculator">
+<summary>
+Bit_Calculator
+</summary>
+</member>
+<member name="M:Model_railway_calculator.Bit_Calculator.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Model_railway_calculator.Dipswitch">
+<summary>
+Dipswitch
+</summary>
+</member>
+<member name="M:Model_railway_calculator.Dipswitch.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Model_railway_calculator.Scale_Scale">
+<summary>
+Scale_Scale
+</summary>
+</member>
+<member name="M:Model_railway_calculator.Scale_Scale.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Model_railway_calculator.Scale_Org">
+<summary>
+Scale_Org
+</summary>
+</member>
+<member name="M:Model_railway_calculator.Scale_Org.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Model_railway_calculator.Org_Scale">
+<summary>
+Org_Scale
+</summary>
+</member>
+<member name="M:Model_railway_calculator.Org_Scale.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Model_railway_calculator.Slope">
+<summary>
+Slope
+</summary>
+</member>
+<member name="M:Model_railway_calculator.Slope.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Model_railway_calculator.MainWindow">
+<summary>
+MainWindow
+</summary>
+</member>
+<member name="M:Model_railway_calculator.MainWindow.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>
