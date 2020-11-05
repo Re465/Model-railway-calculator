@@ -39,3 +39,5 @@ D:\vb\Model railway calculator\obj\Debug\Dipswitch.g.vb
 D:\vb\Model railway calculator\obj\Debug\Dipswitch.baml
 D:\vb\Model railway calculator\obj\Debug\GNU.g.vb
 D:\vb\Model railway calculator\obj\Debug\GNU.baml
+D:\vb\Model railway calculator\obj\Debug\Adres_Calculator_R.g.vb
+D:\vb\Model railway calculator\obj\Debug\Adres_Calculator_R.baml

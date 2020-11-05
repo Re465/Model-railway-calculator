@@ -54,6 +54,16 @@ Model railway calculator
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="T:Model_railway_calculator.Adres_Calculator_R">
+<summary>
+Adres_Calculator_R
+</summary>
+</member>
+<member name="M:Model_railway_calculator.Adres_Calculator_R.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
 <member name="T:Model_railway_calculator.Application">
 <summary>
 Application
