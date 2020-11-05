@@ -1,12 +1,14 @@
 ﻿Class Adres_Calculator
 
     Dim Bit0 As Integer
-    Dim Bit1 As Integer
+    Dim Bit1 As Integer = 2
     Dim Bit2 As Integer
     Dim Bit3 As Integer
     Dim Bit4 As Integer
     Dim Bit5 As Integer
     Dim CV29 As Integer
+    Dim A As Integer
+    Dim CV29_R As Integer
     Dim Primary As Integer
     Dim Adres_1 As Integer
     Dim CV_17_Stufe1 As Integer
@@ -166,18 +168,6 @@
         Call Adres()
     End Sub
 
-    Private Sub Btn_Calculate_Click(sender As Object, e As RoutedEventArgs) Handles Btn_Calculate.Click
-        If (IsNumeric(Txt_Adres.Text)) Then
-            Adres_1 = CSng(Txt_Adres.Text)
-            Call Adres()
-        Else
-            MessageBox.Show("This is not a number.
-You must enter a number from 1 to 9999.", "Incorrect input",
-                                           MessageBoxButton.OK, MessageBoxImage.Exclamation)
-            Call Hidden()
-        End If
-    End Sub
-
     Sub Adres()
         If ChkBit1.IsChecked = True Then
             TxtBit1.Text = "2"
@@ -193,7 +183,7 @@ You must enter a number from 1 to 9999.", "Incorrect input",
         End If
         Select Case Adres_1
             Case < 1
-                MessageBox.Show("This address is too low.", "Incorrect input",
+                MessageBox.Show("This address is too low!", "Incorrect input",
                                 MessageBoxButton.OK, MessageBoxImage.Exclamation)
                 Call Hidden()
             Case < 100
@@ -208,7 +198,7 @@ You must enter a number from 1 to 9999.", "Incorrect input",
             Case < 10000
                 Call Extended()
             Case Else
-                MessageBox.Show("This address is too high.", "Incorrect input",
+                MessageBox.Show("This address is too high!", "Incorrect input",
                                 MessageBoxButton.OK, MessageBoxImage.Exclamation)
                 Call Hidden()
         End Select
@@ -223,16 +213,25 @@ You must enter a number from 1 to 9999.", "Incorrect input",
         Txt_CV1.Visibility = Visibility.Hidden
         Txt_CV17.Visibility = Visibility.Hidden
         Txt_CV18.Visibility = Visibility.Hidden
-        Txt_Adres.Text = "3"
+        Txt_Adres.Text = ""
     End Sub
 
     Sub Extended()
         Txt_CV1.Visibility = Visibility.Hidden
         Txt_CV17.Visibility = Visibility.Visible
         Txt_CV18.Visibility = Visibility.Visible
-        CV_17_Stufe1 = (Adres_1 + 127) / 255 - 1
-        CV_18 = Adres_1 - 255 * CV_17_Stufe1
+        CV_17_Stufe1 = (Adres_1 + 127) / 256 - 1
+        CV_18 = Adres_1 - 256 * CV_17_Stufe1
         CV_17_Stufe2 = CV_17_Stufe1 + 192
+        If CV_18 = 256 Then
+            CV_18 = 0
+            CV_17_Stufe2 = CV_17_Stufe2 + 1
+        End If
+        If CV_18 = 257 Then
+            CV_18 = 1
+            CV_17_Stufe2 = CV_17_Stufe2 + 1
+        End If
+
         ChkBit5.IsChecked = True
         TxtBit5.Text = "32"
         Bit5 = 32
@@ -254,7 +253,25 @@ You must enter a number from 1 to 9999.", "Incorrect input",
         Call BByte()
     End Sub
 
+    Private Sub Txt_Adres_KeyUp(sender As Object, e As KeyEventArgs) Handles Txt_Adres.KeyUp
+        If (IsNumeric(Txt_Adres.Text)) Then
+            Adres_1 = CSng(Txt_Adres.Text)
+            Call Adres()
+        Else
+            MessageBox.Show("This is not a number!
+            You must enter a number from 1 to 9999.", "Incorrect input",
+                                           MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Call Hidden()
+        End If
+    End Sub
 
+
+
+    Private Sub Rdb_Rivers_Click(sender As Object, e As RoutedEventArgs) Handles Rdb_Rivers.Click
+        Dim Rivers As New Adres_Calculator_R
+        Rivers.Show()
+        Close()
+    End Sub
 
 End Class
 
