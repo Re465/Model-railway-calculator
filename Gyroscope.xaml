@@ -57,11 +57,11 @@
             <Label Content="mm" HorizontalAlignment="Left" Height="28" Margin="30,170,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
             <Rectangle HorizontalAlignment="Left" Height="200" Margin="0" Stroke="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" StrokeThickness="1" VerticalAlignment="Top" Width="90"/>
         </Grid>
-        <Button x:Name="Btn_Calculate" Content="Calculate&#xA;" HorizontalAlignment="Left" Height="35" Margin="180,504,0,0" VerticalAlignment="Top" Width="110" FontSize="20"/>
+        <Button x:Name="Btn_Calculate" Content="Calculate&#xA;" HorizontalAlignment="Left" Height="35" Margin="183.168,499,0,0" VerticalAlignment="Top" Width="110" FontSize="20"/>
         <Label Content="1.  Choose unit of measure.&#xA;2.  Fill in one field.&#xA;3.  Push them calculate Butten.&#xA;" HorizontalAlignment="Left" Height="97" Margin="377.505,334,0,0" VerticalAlignment="Top" Width="284" FontSize="20"/>
         <Image Margin="14.009,31.336,595.991,260.664" Source="Rail_gyroscope.png" Stretch="Fill"/>
-        <Label Content="R" HorizontalAlignment="Left" Height="35" Margin="183.168,333.712,0,0" VerticalAlignment="Top" Width="25" FontSize="20" FontWeight="Bold"/>
-        <Label Content="O" HorizontalAlignment="Left" Height="35" Margin="183.168,373.712,0,0" VerticalAlignment="Top" Width="25" FontSize="20" FontWeight="Bold"/>
+        <Label Content="r" HorizontalAlignment="Left" Height="35" Margin="183.168,333.712,0,0" VerticalAlignment="Top" Width="25" FontSize="20" FontWeight="Bold"/>
+        <Label Content="o" HorizontalAlignment="Left" Height="35" Margin="183.168,373.712,0,0" VerticalAlignment="Top" Width="25" FontSize="20" FontWeight="Bold"/>
         <TextBox x:Name="Txb_R" HorizontalAlignment="Left" Height="35" Margin="223.168,333.712,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="20"/>
         <TextBox x:Name="Txb_O" HorizontalAlignment="Left" Height="35" Margin="223.168,373.712,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="20"/>
         <TextBox x:Name="Txt_Unit_R" HorizontalAlignment="Left" Height="35" Margin="292.168,333.712,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" FontSize="20" IsEnabled="False" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Text="cm"/>
@@ -69,9 +69,5 @@
         <TextBox x:Name="Txb_R_Calc" HorizontalAlignment="Left" Height="35" Margin="56.667,192.668,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Foreground="DarkBlue" FontSize="20" BorderBrush="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" TextAlignment="Right" IsEnabled="False"/>
         <TextBox x:Name="Txb_O_Calc" HorizontalAlignment="Left" Height="35" Margin="67.755,70.7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Foreground="DarkBlue" FontSize="20" BorderBrush="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" TextAlignment="Center" IsEnabled="False"/>
         <Label Content="Track radius" HorizontalAlignment="Left" Height="60" Margin="322.379,26.283,0,0" VerticalAlignment="Top" Width="227.132" FontSize="36" FontWeight="Bold"/>
-
     </Grid>
-
-
-
 </Window>
