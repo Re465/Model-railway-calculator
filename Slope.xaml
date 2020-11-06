@@ -65,10 +65,7 @@
         <TextBox x:Name="Txb_B" HorizontalAlignment="Left" Height="35" Margin="220,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="20"/>
         <TextBox x:Name="Txb_C" HorizontalAlignment="Left" Height="35" Margin="220,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="20"/>
         <TextBox x:Name="Txb_Alfa" HorizontalAlignment="Left" Height="35" Margin="220,420,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="20"/>
-        <Button x:Name="Btn_Calculate" Content="Calculate&#xA;" HorizontalAlignment="Left" Height="35" Margin="180,470,0,0" VerticalAlignment="Top" Width="110" FontSize="20"/>
-
-
-
+        <Button x:Name="Btn_Calculate" Content="Calculate&#xA;" HorizontalAlignment="Left" Height="35" Margin="180,465,0,0" VerticalAlignment="Top" Width="110" FontSize="20"/>
         <Label Content="‰" HorizontalAlignment="Left" Height="35" Margin="291,420,0,0" VerticalAlignment="Top" Width="36" FontSize="20" IsEnabled="False"/>
         <TextBox x:Name="Txt_Unit_A" HorizontalAlignment="Left" Height="35" Margin="289,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" FontSize="20" IsEnabled="False" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Text="cm"/>
         <TextBox x:Name="Txt_Unit_B" HorizontalAlignment="Left" Height="35" Margin="289,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" FontSize="20" IsEnabled="False" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Text="cm"/>
@@ -108,7 +105,4 @@
             </TextBox.RenderTransform>
         </TextBox>
     </Grid>
-
-
-
 </Window>
