@@ -1,4 +1,4 @@
-﻿Class Helex
+﻿CClass Helex
     Dim Lengte_H As Single
     Dim Lengte_A As Single
     Dim Lengte_Total As Single
@@ -19,8 +19,6 @@
     Dim Unit As String = "cm"
     Dim Teller As Single = 0
     Dim Helex_H As Single
-
-
 
     Private Sub FileExit_Click(sender As Object, e As RoutedEventArgs) Handles FileExit.Click
         Close()
@@ -97,7 +95,6 @@
         Blad6_2.Show()
         Close()
     End Sub
-
 
     Private Sub Chk_Mile_Click(sender As Object, e As RoutedEventArgs) Handles Chk_Mile.Click
         If Chk_Mile.IsChecked = True Then
@@ -211,32 +208,30 @@
             Promile2 = Lengte_H / Lengte_A2 * 1000 'Promile
 
             Txt_Track2.Visibility = Visibility.Visible
+            Txb_Layer_T2_Calc.Text = "Layer Lengthy :  " + Lengte_C2.ToString("0.## ") + Unit
             Txb_Track_T2_Calc.Text = "Track lengthy :  " + Lengte_Total2.ToString("0.## ") + Unit
             Txb_Slope_T2_Calc.Text = "Slope :  " + Promile2.ToString("0.##") + "‰ und " + Grade2.ToString("0.##°")
             Txb_Radius_T2_Calc.Text = "Radius :  " + Lengte_R2.ToString("0.## ") + Unit
         Else
 
             Txt_Track2.Visibility = Visibility.Hidden
+            Txb_Layer_T2_Calc.Text = ""
             Txb_Track_T2_Calc.Text = ""
             Txb_Slope_T2_Calc.Text = ""
             Txb_Radius_T2_Calc.Text = ""
         End If
-
 
         Txb_H_Calc.Text = Lengte_H.ToString("0.## ") + Unit
         Txb_B_Calc.Text = Lengte_B.ToString("0.## ") + Unit
         Txb_Layer_Calc.Text = "Layer highest :  " + Lengte_H.ToString("0.## ") + Unit
         Txb_Tot_H_Calc.Text = "Total highest :  " + Helex_H.ToString("0.## ") + Unit
         Txb_Amount_Calc.Text = "Amount of layers :  " + Amount.ToString("0.## ")
+        Txb_Layer_T1_Calc.Text = "Layer Lengthy :  " + Lengte_C.ToString("0.## ") + Unit
         Txb_Track_T1_Calc.Text = "Track lengthy :  " + Lengte_Total.ToString("0.## ") + Unit
         Txb_Slope_T1_Calc.Text = "Slope :  " + Promile.ToString("0.##") + "‰ und " + Grade.ToString("0.##°")
         Txb_Radius_T1_Calc.Text = "Radius :  " + Lengte_R.ToString("0.## ") + Unit
 
-
-
-
         Teller = 0
-
     End Sub
 
 End Class
