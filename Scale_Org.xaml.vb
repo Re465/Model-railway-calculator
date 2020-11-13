@@ -296,16 +296,16 @@
         End If
     End Sub
 
-    Private Sub Chk_XY_Click(sender As Object, e As RoutedEventArgs) Handles Chk_XY.Click
-        If Chk_XY.IsChecked = True Then
-            If (IsNumeric(Txb_XY.Text) = True) Then
-                Scale_A = CSng(Txb_XY.Text)
-                Scale_A1 = "XY scale (1:" + CStr(Scale_A) + ")"
+    Private Sub Chk_YZ_Click(sender As Object, e As RoutedEventArgs) Handles Chk_YZ.Click
+        If Chk_YZ.IsChecked = True Then
+            If (IsNumeric(Txb_YZ.Text) = True) Then
+                Scale_A = CSng(Txb_YZ.Text)
+                Scale_A1 = "YZ scale (1:" + CStr(Scale_A) + ")"
             Else
                 Chk_H0.IsChecked = True
                 Scale_A = 87
-                Txb_XY.Text = ""
-                MessageBox.Show("You have not entered XY number.", "Incorrect input",
+                Txb_YZ.Text = ""
+                MessageBox.Show("You have not entered YZ number.", "Incorrect input",
                                 MessageBoxButton.OK, MessageBoxImage.Exclamation)
             End If
         End If
@@ -314,24 +314,43 @@
     Private Sub Btn_Calculate_Click(sender As Object, e As RoutedEventArgs) Handles Btn_Calculate.Click
         If (IsNumeric(Txt_Input.Text) = True) Then
             Input1 = CInt(Txt_Input.Text)
-            Scale_A1 = "XY scale (1:" + CStr(Scale_A) + ")"
+            If Chk_YZ.IsChecked = True Then
+                If (IsNumeric(Txb_YZ.Text) = True) Then
+                    Scale_A = CSng(Txb_YZ.Text)
+                    Scale_A1 = "YZ scale (1:" + CStr(Scale_A) + ")"
+                    Call Unit()
+                Else
+                    Txb_YZ.Text = ""
+                    Txt_Output.Text = ""
+                    MessageBox.Show("You have not entered YZ number.", "Incorrect input",
+                                    MessageBoxButton.OK, MessageBoxImage.Exclamation)
+                    Exit Sub
+                End If
+            End If
+            Call Unit()
         Else
             MessageBox.Show("You have not entered a size.", "Incorrect input",
                             MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txt_Output.Text = ""
         End If
-        If Chk_XY.IsChecked = True Then
-            If (IsNumeric(Txb_XY.Text) = True) Then
-                Scale_A = CSng(Txb_XY.Text)
-            Else
-                Chk_XY.IsChecked = False
-                Chk_H0.IsChecked = True
-                Scale_A = 87
-                Txb_XY.Text = ""
-                MessageBox.Show("You have not entered XY number.", "Incorrect input",
-                                MessageBoxButton.OK, MessageBoxImage.Exclamation)
-            End If
-        End If
+    End Sub
 
+    Private Sub Txb_YZ_KeyUp(sender As Object, e As KeyEventArgs) Handles Txb_YZ.KeyUp
+        If Txb_YZ.Text = "" Then Exit Sub
+        If (IsNumeric(Txb_YZ.Text) = True) Then
+            Chk_YZ.IsChecked = True
+            Scale_A = CSng(Txb_YZ.Text)
+            Scale_A1 = "YZ scale (1:" + CStr(Scale_A) + ")"
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txb_YZ.Text = ""
+            Txt_Output.Text = ""
+            Scale_A1 = ""
+        End If
+    End Sub
+
+    Private Sub Unit()
         Select Case Unit_A_1
             Case 1
                 Output1 = Input1 * 1609.344 * Scale_A
@@ -368,4 +387,14 @@
         Txt_Output.Text = $"{CStr(Input1)}{Unit_A} from {Scale_A1} is {Output2:0.##}{Unit_B} long"
     End Sub
 
+    Private Sub Txt_Input_KeyUp(sender As Object, e As KeyEventArgs) Handles Txt_Input.KeyUp
+        If Txt_Input.Text = "" Then Exit Sub
+        If (IsNumeric(Txt_Input.Text) = True) Then
+            Input1 = CInt(Txt_Input.Text)
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txt_Input.Text = ""
+        End If
+    End Sub
 End Class

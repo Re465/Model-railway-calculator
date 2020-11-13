@@ -1,16 +1,12 @@
 ﻿Class Adres_Calculator_R
 
     Dim CV29_R As Integer
-    Dim Primary As Integer
     Dim Adres_1 As Integer
     Dim CV1_R As Integer
     Dim CV17_R As Integer
     Dim CV17_1 As Integer
     Dim CV17_2 As Integer
     Dim CV18_R As Integer
-    Dim CV18_Stufe2 As Integer
-    Dim CV18 As Integer
-
 
     Private Sub FileExit_Click(sender As Object, e As RoutedEventArgs) Handles FileExit.Click
         Close()

@@ -436,37 +436,70 @@
     Private Sub Btn_Calculate_Click(sender As Object, e As RoutedEventArgs) Handles Btn_Calculate.Click
         If (IsNumeric(Txt_Input.Text) = True) Then
             Input1 = CInt(Txt_Input.Text)
-            'Scale_A1 = "XY scale (1:" + CStr(Scale_A) + ")"
         Else
             MessageBox.Show("You have not entered a size.", "Incorrect input",
                             MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txt_Output.Text = ""
+            Exit Sub
         End If
         If Chk_XY_A.IsChecked = True Then
             If (IsNumeric(Txb_XY.Text) = True) Then
                 Scale_A = CSng(Txb_XY.Text)
                 Scale_A1 = "XY scale (1:" + CStr(Scale_A) + ")"
             Else
-                Chk_H0_A.IsChecked = True
-                Scale_A = 87
+                Txt_Output.Text = ""
                 Txb_XY.Text = ""
                 MessageBox.Show("You have not entered XY number.", "Incorrect input",
                                 MessageBoxButton.OK, MessageBoxImage.Exclamation)
+                Exit Sub
             End If
         End If
-
         If Chk_YZ_B.IsChecked = True Then
             If (IsNumeric(Txb_YZ.Text) = True) Then
                 Scale_B = CSng(Txb_YZ.Text)
                 Scale_B1 = "YZ scale (1:" + CStr(Scale_B) + ")"
             Else
-                Chk_H0_B.IsChecked = True
-                Scale_B = 87
+                Txt_Output.Text = ""
                 Txb_YZ.Text = ""
                 MessageBox.Show("You have not entered YZ number.", "Incorrect input",
                                 MessageBoxButton.OK, MessageBoxImage.Exclamation)
+                Exit Sub
             End If
         End If
+        Call Unit()
+    End Sub
 
+    Private Sub Txb_XY_KeyUp(sender As Object, e As KeyEventArgs) Handles Txb_XY.KeyUp
+        If Txb_XY.Text = "" Then Exit Sub
+        If (IsNumeric(Txb_XY.Text) = True) Then
+            Chk_XY_A.IsChecked = True
+            Scale_A = CSng(Txb_XY.Text)
+            Scale_A1 = "XY scale (1:" + CStr(Scale_A) + ")"
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txb_XY.Text = ""
+            Txt_Output.Text = ""
+            Scale_A1 = ""
+        End If
+    End Sub
+
+    Private Sub Txb_YZ_KeyUp(sender As Object, e As KeyEventArgs) Handles Txb_YZ.KeyUp
+        If Txb_YZ.Text = "" Then Exit Sub
+        If (IsNumeric(Txb_YZ.Text) = True) Then
+            Chk_YZ_B.IsChecked = True
+            Scale_B = CSng(Txb_YZ.Text)
+            Scale_B1 = "YZ scale (1:" + CStr(Scale_B) + ")"
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txb_YZ.Text = ""
+            Txt_Output.Text = ""
+            Scale_B1 = ""
+        End If
+    End Sub
+
+    Private Sub Unit()
         Select Case Unit_A_1
             Case 1
                 Output1 = Input1 * 1609.344 * Scale_A
@@ -501,7 +534,16 @@
                 Output2 = Output1 / 0.001 / Scale_B
         End Select
         Txt_Output.Text = $"{CStr(Input1)}{Unit_A} from {Scale_A1} is to {Scale_B1} {Output2:0.##}{Unit_B} long"
-
     End Sub
 
+    Private Sub Txt_Input_KeyUp(sender As Object, e As KeyEventArgs) Handles Txt_Input.KeyUp
+        If Txt_Input.Text = "" Then Exit Sub
+        If (IsNumeric(Txt_Input.Text) = True) Then
+            Input1 = CInt(Txt_Input.Text)
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txt_Input.Text = ""
+        End If
+    End Sub
 End Class

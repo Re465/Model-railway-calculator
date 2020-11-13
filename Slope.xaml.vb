@@ -238,4 +238,47 @@
         Teller2 = 0
     End Sub
 
+    Private Sub Txb_A_KeyUp(sender As Object, e As KeyEventArgs) Handles Txb_A.KeyUp
+        If Txb_A.Text = "" Then Exit Sub
+        If (IsNumeric(Txb_A.Text)) Then
+            Lengte_A = CSng(Txb_A.Text)
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txb_A.Text = ""
+        End If
+    End Sub
+
+    Private Sub Txb_B_KeyUp(sender As Object, e As KeyEventArgs) Handles Txb_B.KeyUp
+        If Txb_B.Text = "" Then Exit Sub
+        If (IsNumeric(Txb_B.Text)) Then
+            Lengte_B = CSng(Txb_B.Text)
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txb_B.Text = ""
+        End If
+    End Sub
+
+    Private Sub Txb_C_KeyUp(sender As Object, e As KeyEventArgs) Handles Txb_C.KeyUp
+        If Txb_C.Text = "" Then Exit Sub
+        If (IsNumeric(Txb_C.Text)) Then
+            Lengte_C = CSng(Txb_C.Text)
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txb_C.Text = ""
+        End If
+    End Sub
+
+    Private Sub Txb_Alfa_KeyUp(sender As Object, e As KeyEventArgs) Handles Txb_Alfa.KeyUp
+        If Txb_Alfa.Text = "" Then Exit Sub
+        If (IsNumeric(Txb_Alfa.Text)) Then
+            Promile = CSng(Txb_Alfa.Text)
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txb_Alfa.Text = ""
+        End If
+    End Sub
 End Class
