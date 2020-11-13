@@ -2,7 +2,6 @@
     Dim Lengte_R As Single
     Dim Lengte_O As Single
     Dim Unit As String = "cm"
-    Dim Teller As Single = 0
 
     Private Sub FileExit_Click(sender As Object, e As RoutedEventArgs) Handles FileExit.Click
         Close()
@@ -137,45 +136,35 @@
         End If
     End Sub
 
-    Private Sub Btn_Calculate_Click(sender As Object, e As RoutedEventArgs) Handles Btn_Calculate.Click
-        Teller = 0
-
+    Private Sub Txb_R_KeyUp(sender As Object, e As KeyEventArgs) Handles Txb_R.KeyUp
+        If Txb_R.Text = "" Then Exit Sub
         If (IsNumeric(Txb_R.Text)) Then
             Lengte_R = CSng(Txb_R.Text)
-            Teller += 1
+            Lengte_O = 2 * Lengte_R * Math.PI
+            Txb_R_Calc.Text = Lengte_R.ToString("0.##") + Unit
+            Txb_O_Calc.Text = Lengte_O.ToString("0.##") + Unit
+            Txb_O.Text = ""
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txb_R.Text = ""
+            Txb_O.Text = ""
         End If
+    End Sub
+
+    Private Sub Txb_O_KeyUp(sender As Object, e As KeyEventArgs) Handles Txb_O.KeyUp
+        If Txb_O.Text = "" Then Exit Sub
         If (IsNumeric(Txb_O.Text)) Then
             Lengte_O = CSng(Txb_O.Text)
-            Teller += 2
+            Lengte_R = (Lengte_O / 2) / Math.PI
+            Txb_R_Calc.Text = Lengte_R.ToString("0.##") + Unit
+            Txb_O_Calc.Text = Lengte_O.ToString("0.##") + Unit
+            Txb_R.Text = ""
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txb_R.Text = ""
+            Txb_O.Text = ""
         End If
-
-
-        Select Case Teller
-            Case 0
-                MessageBox.Show("You must fill in one field.", "Incorrect input",
-                                MessageBoxButton.OK, MessageBoxImage.Exclamation)
-            Case 1
-                Call Caculator()
-            Case 2
-                Call Caculator()
-            Case Else
-                MessageBox.Show("You have filled in too many fields.", "Incorrect input",
-                                MessageBoxButton.OK, MessageBoxImage.Exclamation)
-        End Select
     End Sub
-
-    Sub Caculator()
-
-        Select Case Teller
-            Case 1
-                Lengte_O = 2 * Lengte_R * Math.PI
-            Case 2
-                Lengte_R = (Lengte_O / 2) / Math.PI
-        End Select
-
-        Txb_R_Calc.Text = Lengte_R.ToString("0.##") + Unit
-        Txb_O_Calc.Text = Lengte_O.ToString("0.##") + Unit
-        Teller = 0
-    End Sub
-
 End Class

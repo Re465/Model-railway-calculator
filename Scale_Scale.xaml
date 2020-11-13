@@ -196,6 +196,7 @@
             <Label Content="YZ =" HorizontalAlignment="Left" Height="28" Margin="195,195,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
 
         </Grid>
+        <Label Content="NMRA = Standards of National Model Railroad Association&#xA;&#xA;NEM (MOROP) = Standards of European model railways&#xA;                            (Normen europäischer Modelleisenbahnen)&#xA;&#xA;BRMSB = British Railway Modelling Standards Bureau&#xA;                (Does not exist anymore)&#xA;" HorizontalAlignment="Left" Height="150.799" Margin="450,396.595,0,0" VerticalAlignment="Top" Width="417" FontSize="15"/>
 
 
     </Grid>

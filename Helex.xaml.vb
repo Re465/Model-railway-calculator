@@ -1,4 +1,4 @@
-﻿CClass Helex
+﻿Class Helex
     Dim Lengte_H As Single
     Dim Lengte_A As Single
     Dim Lengte_Total As Single
@@ -234,4 +234,47 @@
         Teller = 0
     End Sub
 
+    Private Sub Txb_H_KeyUp(sender As Object, e As KeyEventArgs) Handles Txb_H.KeyUp
+        If Txb_H.Text = "" Then Exit Sub
+        If (IsNumeric(Txb_H.Text)) Then
+            Lengte_H = CSng(Txb_H.Text)
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txb_H.Text = ""
+        End If
+    End Sub
+
+    Private Sub Txb_B_KeyUp(sender As Object, e As KeyEventArgs) Handles Txb_B.KeyUp
+        If Txb_B.Text = "" Then Exit Sub
+        If (IsNumeric(Txb_B.Text)) Then
+            Lengte_B = CSng(Txb_B.Text)
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txb_B.Text = ""
+        End If
+    End Sub
+
+    Private Sub Txb_Amount_KeyUp(sender As Object, e As KeyEventArgs) Handles Txb_Amount.KeyUp
+        If Txb_Amount.Text = "" Then Exit Sub
+        If (IsNumeric(Txb_Amount.Text)) Then
+            Amount = CSng(Txb_Amount.Text)
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txb_Amount.Text = "1"
+        End If
+    End Sub
+
+    Private Sub Txb_Alfa_KeyUp(sender As Object, e As KeyEventArgs) Handles Txb_Alfa.KeyUp
+        If Txb_Alfa.Text = "" Then Exit Sub
+        If (IsNumeric(Txb_Alfa.Text)) Then
+            Promile = CSng(Txb_Alfa.Text)
+        Else
+            MessageBox.Show("This is not a number!", "Incorrect input",
+                            MessageBoxButton.OK, MessageBoxImage.Exclamation)
+            Txb_Alfa.Text = ""
+        End If
+    End Sub
 End Class

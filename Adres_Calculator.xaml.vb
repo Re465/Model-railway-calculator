@@ -7,8 +7,6 @@
     Dim Bit4 As Integer
     Dim Bit5 As Integer
     Dim CV29 As Integer
-    Dim A As Integer
-    Dim CV29_R As Integer
     Dim Primary As Integer
     Dim Adres_1 As Integer
     Dim CV_17_Stufe1 As Integer
@@ -225,11 +223,11 @@
         CV_17_Stufe2 = CV_17_Stufe1 + 192
         If CV_18 = 256 Then
             CV_18 = 0
-            CV_17_Stufe2 = CV_17_Stufe2 + 1
+            CV_17_Stufe2 += 1
         End If
         If CV_18 = 257 Then
             CV_18 = 1
-            CV_17_Stufe2 = CV_17_Stufe2 + 1
+            CV_17_Stufe2 += 1
         End If
 
         ChkBit5.IsChecked = True
@@ -254,6 +252,7 @@
     End Sub
 
     Private Sub Txt_Adres_KeyUp(sender As Object, e As KeyEventArgs) Handles Txt_Adres.KeyUp
+        If Txt_Adres.Text = "" Then Exit Sub
         If (IsNumeric(Txt_Adres.Text)) Then
             Adres_1 = CSng(Txt_Adres.Text)
             Call Adres()

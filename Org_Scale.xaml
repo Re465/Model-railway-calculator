@@ -61,6 +61,7 @@
         </Grid>
         <!--To scale-->
         <Grid HorizontalAlignment="Left" Height="260" Margin="249,90,0,0" VerticalAlignment="Top" Width="400">
+            <Rectangle HorizontalAlignment="Left" Height="260" Margin="0" Stroke="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" StrokeThickness="1" VerticalAlignment="Top" Width="400"/>
             <Label Content="To scale" HorizontalAlignment="Left" Height="28" Margin="10,-1,0,0" VerticalAlignment="Top" Width="71" FontSize="16"/>
             <RadioButton x:Name="Chk_Z" Content="RadioButton" HorizontalAlignment="Left" Height="15" Margin="10,30,0,0" VerticalAlignment="Top" Width="15"/>
             <Label Content="1:220" HorizontalAlignment="Left" Height="28" Margin="25,20,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
@@ -112,7 +113,7 @@
             <Label Content="Other scale" HorizontalAlignment="Left" Height="28" Margin="290,170,0,0" VerticalAlignment="Top" Width="89" FontSize="16"/>
             <TextBox x:Name="Txb_XY" HorizontalAlignment="Left" Height="28" Margin="290,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80" FontSize="16"/>
             <Label Content="XY =" HorizontalAlignment="Left" Height="28" Margin="240,195,0,0" VerticalAlignment="Top" Width="50" FontSize="16"/>
-            <Rectangle HorizontalAlignment="Left" Height="260" Margin="0" Stroke="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" StrokeThickness="1" VerticalAlignment="Top" Width="400"/>
+
         </Grid>
         <!--To unit-->
         <Grid HorizontalAlignment="Left" Height="200" Margin="777,90,0,0" VerticalAlignment="Top" Width="90">
@@ -138,6 +139,7 @@
         <TextBox x:Name="Txt_Unit_A" HorizontalAlignment="Left" Height="28" Margin="382,438,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" FontSize="16" IsEnabled="False" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Text="cm"/>
         <Button x:Name="Btn_Calculate" Content="Calculate&#xA;" HorizontalAlignment="Left" Height="35" Margin="313,485,0,0" VerticalAlignment="Top" Width="110" FontSize="20"/>
         <TextBox x:Name="Txt_Output" HorizontalAlignment="Left" Height="28" Margin="341,370,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="526" Foreground="DarkBlue" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" IsEnabled="False" TextAlignment="Right"/>
+        <Label Content="NMRA = Standards of National Model Railroad Association&#xD;&#xA;&#xD;&#xA;NEM (MOROP) = Standards of European model railways&#xD;&#xA;                            (Normen europäischer Modelleisenbahnen)&#xD;&#xA;&#xD;&#xA;BRMSB = British Railway Modelling Standards Bureau&#xD;&#xA;                (Does not exist anymore)&#xD;&#xA;" HorizontalAlignment="Left" Height="150.799" Margin="450,396.595,0,0" VerticalAlignment="Top" Width="417" FontSize="15"/>
 
 
     </Grid>

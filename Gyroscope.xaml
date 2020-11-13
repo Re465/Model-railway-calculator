@@ -57,8 +57,7 @@
             <Label Content="mm" HorizontalAlignment="Left" Height="28" Margin="30,170,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
             <Rectangle HorizontalAlignment="Left" Height="200" Margin="0" Stroke="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" StrokeThickness="1" VerticalAlignment="Top" Width="90"/>
         </Grid>
-        <Button x:Name="Btn_Calculate" Content="Calculate&#xA;" HorizontalAlignment="Left" Height="35" Margin="183.168,499,0,0" VerticalAlignment="Top" Width="110" FontSize="20"/>
-        <Label Content="1.  Choose unit of measure.&#xA;2.  Fill in one field.&#xA;3.  Push them calculate Butten.&#xA;" HorizontalAlignment="Left" Height="97" Margin="377.505,334,0,0" VerticalAlignment="Top" Width="284" FontSize="20"/>
+        <Label Content="1.  Choose unit of measure.&#xA;2.  Fill in one field.&#xA;" HorizontalAlignment="Left" Height="74.712" Margin="377.505,334,0,0" VerticalAlignment="Top" Width="284" FontSize="20"/>
         <Image Margin="14.009,31.336,595.991,260.664" Source="Rail_gyroscope.png" Stretch="Fill"/>
         <Label Content="r" HorizontalAlignment="Left" Height="35" Margin="183.168,333.712,0,0" VerticalAlignment="Top" Width="25" FontSize="20" FontWeight="Bold"/>
         <Label Content="o" HorizontalAlignment="Left" Height="35" Margin="183.168,373.712,0,0" VerticalAlignment="Top" Width="25" FontSize="20" FontWeight="Bold"/>
