@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Model_railway_calculator"
         mc:Ignorable="d"
-        Title="Model railway caculator" Height="600" Width="900" Icon="train.png" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+        Title="Model railway calculator" Height="600" Width="900" Icon="train.png" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
 
     <Grid Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Margin="0,0,0,-5">
         <!--Menubalk-->
@@ -14,7 +14,7 @@
                 <MenuItem x:Name="MainWindow" Header="Mainwindow" HorizontalAlignment="Left" Height="20" Width="165"/>
                 <MenuItem x:Name="FileExit" Header="Quit" HorizontalAlignment="Left" Height="20" Width="165"/>
             </MenuItem>
-            <MenuItem Header="Scale calulator" Height="20" Width="90">
+            <MenuItem Header="Scale calculator" Height="20" Width="90">
                 <MenuItem x:Name="Org_Scale" Header="1:1 to scale" HorizontalAlignment="Left" Height="20" Width="160"/>
                 <MenuItem x:Name="Scale_Org" Header="Scale to 1:1" HorizontalAlignment="Left" Height="20" Width="160"/>
                 <MenuItem x:Name="Scale_Scale" Header="Scale to scale" HorizontalAlignment="Left" Height="20" Width="160" IsEnabled="False"/>
